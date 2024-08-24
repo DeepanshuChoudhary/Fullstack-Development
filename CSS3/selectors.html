@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+
+    <style>
+
+        /* (*) this is a universal selector make all elements red */
+        *{
+            color: red;
+        }
+
+        h1{
+            color: blue;
+        }
+
+        .para{
+            color: green;
+        }
+
+        #author{
+            color: purple;
+        }
+        
+        /* [data] is an attribute selector through this we represent the custom attribute */
+        [data]{
+            color: blue;
+        }
+        
+        /* [data="value"] is an attribute selector through this we represent the custom attribute with value */
+        /* [data="medicines"]{
+            color: green;
+        } */
+
+        /* [data^="value"] attribute starts with a certain value */
+        [data^="med"]{
+            color: peru;
+        }
+
+        /* [data$="science"] attribute ends with a certain value */
+        [data$="science"]{
+            color: orange;
+        }
+
+        /* [data*="value"] */
+        [data*="science"]{
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Selectors in CSS</h1>
+
+    <ol>
+        <li>Universal</li>
+        <li>Elements</li>
+        <li>Class</li>
+        <li>ID</li>
+        <li>Attribute</li>
+        <li>Combinators</li>
+        <li>Descendent</li>
+        <li>Group</li>
+    </ol>
+    <!-- <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aperiam molestiae tempore labore quas molestias non id beatae cumque quis, blanditiis sint rem deleniti error ut quibusdam? Earum, vitae reiciendis.</p>
+    <p id="author">Grabriel</p> -->
+    
+    <!-- data - is an custom attribute, this is not a standard attribute in HTML --> 
+    <p data="medicines">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis asperiores non soluta amet enim architecto dolores exercitationem laboriosam ullam reiciendis recusandae dicta dolorem repellat, totam eligendi minus delectus! Qui, neque!
+    </p>
+
+    <p data="medical science">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis asperiores non soluta amet enim architecto dolores exercitationem laboriosam ullam reiciendis recusandae dicta dolorem repellat, totam eligendi minus delectus! Qui, neque!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis asperiores non soluta amet enim architecto dolores exercitationem laboriosam ullam reiciendis recusandae dicta dolorem repellat, totam eligendi minus delectus! Qui, neque!
+    </p>
+</body>
+</html>
