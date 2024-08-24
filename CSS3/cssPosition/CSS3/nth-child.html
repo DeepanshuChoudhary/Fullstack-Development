@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* li:first-child select the first element in the list that is "God father" & if i create another <li> list again there first element are selected and there color are Red */
+        li:first-child{
+            color: red;
+        }
+
+        /* li-last-child select the last element in the list */
+        li:last-child{
+            color: blue;
+        }
+
+        /* An + B where n will start taking values from 0.... */
+        li:nth-child(2n+1){
+            color: green;
+        }
+
+        li:nth-child(2n){
+            color: yellow;
+        }
+
+        /* we can put negative value too like  li:nth-child(-2n+5), customize the value according to the requirement */
+        li:nth-child(-2n+5){ /* (-2*0+5=5, -2*1+5=3, -2*2+5=1....) */
+            color: purple;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Important pseudo classes -->
+    <!-- hover, active, focus, nth-child, first-child, last-child, first-of-type, last-of-type -->
+    <!-- first-child, last-child
+        first-of-type, last-of-type -->
+
+    <ol>
+        <li>God father</li>
+        <li>Battle los angles</li>
+        <li>World war z</li>
+        <li>Friends</li>
+        <li>Gone with the wind</li>
+        <li>Matrix</li>
+        <li>lost in space</li>
+        <li>bird box</li>
+        <li>leave world behind</li>
+        <li>Joker</li>
+    </ol>
+
+    <h2>Top 10 Rappers</h2>
+    <ol>
+        <li>Raftaar</li>
+        <li>Krsna</li>
+        <li>Badshah</li>
+        <li>Karan Aujla</li>
+        <li>J-Trix</li>
+    </ol>
+    
+    <ol>
+        <li>Zombie land</li>
+        <li>Battle los angles</li>
+        <li>World war z</li>
+        <li>Friends</li>
+        <li>Gone with the wind</li>
+        <li>Matrix</li>
+        <li>lost in space</li>
+        <li>bird box</li>
+        <li>leave world behind</li>
+        <li>Joker</li>
+    </ol>
+
+</body>
+</html>
