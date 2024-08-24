@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+
+    <style>
+
+        /* universal < tag < class < id < inline < !important <<<< specificity+!important */
+
+        /* The value of this is  (1,0,0)=100 */
+        #mypara{
+            color: darkblue;
+        }
+
+        /* The value of this (0,1,0)=10 */
+        .para{
+            color: green !important; /* when using !important tag in multiple places then it will applied on the higher specificity element*/
+        }
+
+        /* This value of this is (0,0,1)=1 */
+        p{
+            color: blue !important; /* !important is the highest specificity then inline styles */
+        }
+
+        /* The value of this (0,0,0)=0 */
+        *{
+            color: red !important;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- inline styling have more value then id & class, the color show in the browser is the one with the highest value -->
+    <p id="mypara" class="para" style="color: darkgoldenrod">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo itaque repudiandae inventore obcaecati delectus quam enim, excepturi quis dolorem? Aut fuga necessitatibus unde pariatur dolores enim amet hic, veniam iusto!</p>
+
+</body>
+</html>
