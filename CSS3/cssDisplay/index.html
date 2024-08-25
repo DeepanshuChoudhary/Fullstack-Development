@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            display: block;
+        }
+        p{
+            display: inline;
+        }
+
+        .box1{
+            background-color: red;
+            width: 64px;
+            height: 64px;
+            
+            /* display: inline; - it can remove the box bcoz, the amount of space it will be taken by that box is equal to the amount of content inside it. */
+            /* display: inline; - */  /* here we put the number {1,2,3,4,5} inside the box */
+            
+            /* this will make the box take the space of the content inside it, means have inline property with block property */
+
+            display: inline-block; /* here if i want my box in original size , i have to use this property */
+
+        }
+
+        .box2{
+            background-color: green;
+            width: 64px;
+            height: 64px;
+            /* display: inline; */
+            display: inline-block;
+        }
+
+        .box3{
+            background-color: blue;
+            width: 64px;
+            height: 64px;
+            /* display: inline; */
+            display: inline-block;
+        }
+
+        .box4{
+            background-color: cornflowerblue;
+            width: 64px;
+            height: 64px;
+            /* display: inline; */
+            display: inline-block;
+        }
+
+        .box5{
+            background-color: coral;
+            width: 64px;
+            height: 64px;
+            /* display: inline; */
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- # is a dead link -->
+    <a href="#">Link1</a>
+    <a href="#">Link2</a>
+    <a href="#">Link3</a>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum similique sed, ratione omnis rem illum. Reiciendis quo cum ex ut soluta tempora cumque ad accusantium ducimus, in est nihil eligendi?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum similique sed, ratione omnis rem illum. Reiciendis quo cum ex ut soluta tempora cumque ad accusantium ducimus, in est nihil eligendi?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum similique sed, ratione omnis rem illum. Reiciendis quo cum ex ut soluta tempora cumque ad accusantium ducimus, in est nihil eligendi?</p>
+
+    <br>
+    <div class="box1">1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+
+</body>
+</html>
