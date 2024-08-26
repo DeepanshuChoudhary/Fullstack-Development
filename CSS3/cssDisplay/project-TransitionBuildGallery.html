@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Gallery</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/512px-Circle-icons-computer.svg.png">
+
+    <style>
+
+        body{
+            background-color: rgb(36, 30, 78);
+        }
+
+        h1{
+            color: yellow;
+            text-align: center;
+        }
+
+        .grid-container{
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2, 2fr);
+            grid-template-rows: repeat(3, 16rem);
+        }
+
+        .grid-container>div>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid-container>div>img:hover{
+            transition: 1s all;
+            filter: brightness(50%);
+            transform: scale(1.2);
+        }
+
+        .grid-container>div{
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text{
+            position: absolute;
+            color: white;
+            bottom: 1rem;
+            left: 43%;
+            /* ensures that the element it’s applied to will appear above any other overlapping elements */
+            z-index: 20;
+            font-size: 1.5rem;
+            /* display: block; */
+        }
+
+        /* .text:hover{
+            font-size: 2rem;
+            transition: 0.4s all;
+        } */
+
+        .grid-container>div:hover .text{
+            font-size: 2rem;
+            transition: 0.4s all;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Image Gallery</h1>
+
+    <div class="grid-container">
+        <div class="item1">
+            
+            <div class="text">Travel</div>
+            <img src="https://images.unsplash.com/photo-1723920521478-06afc140103b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8RnpvM3p1T0hONnd8fGVufDB8fHx8fA%3D%3D" alt="Travel">
+
+        </div>
+        <div class="item2">
+            
+            <div class="text">City</div>
+            <img src="https://plus.unsplash.com/premium_photo-1672116452571-896980a801c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2l0eXxlbnwwfHwwfHx8MA%3D%3D
+                " alt="City">
+
+        </div>
+        <div class="item3">
+            
+            <div class="text">Building</div>
+            <img src="https://plus.unsplash.com/premium_photo-1676657954811-9409c4830467?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D" alt="Building">
+
+        </div>
+        <div class="item4">
+            
+            <div class="text">Elephant</div>
+            <img src="https://plus.unsplash.com/premium_photo-1664300362291-16264cacd847?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWxlcGhhbnR8ZW58MHx8MHx8fDA%3D" alt="Elephant">
+
+        </div>
+        <div class="item5">
+            
+            <div class="text">Grass</div>
+            <img src="https://plus.unsplash.com/premium_photo-1667530834040-9a9ce7f52e96?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW91bnRhaW5zfGVufDB8fDB8fHww" alt="Grass">
+
+        </div>
+        <div class="item6">
+            
+            <div class="text">Sunset</div>
+            <img src="https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunset">
+
+        </div>
+    </div>
+
+    <!-- <div class="grid-container">
+        <div class="item1"> Travel
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1723920521478-06afc140103b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8RnpvM3p1T0hONnd8fGVufDB8fHx8fA%3D%3D" alt="Travel">
+            </div>
+        </div>
+        <div class="item2">
+            <div class="image">
+                City
+                <img src="https://plus.unsplash.com/premium_photo-1672116452571-896980a801c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2l0eXxlbnwwfHwwfHx8MA%3D%3D
+                " alt="City">
+            </div>
+        </div>
+        <div class="item3">
+            <div class="image">
+                Building
+                <img src="https://plus.unsplash.com/premium_photo-1676657954811-9409c4830467?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D" alt="Building">
+            </div>
+        </div>
+        <div class="item4">
+            <div class="image">
+                Elephant
+                <img src="https://plus.unsplash.com/premium_photo-1664300362291-16264cacd847?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWxlcGhhbnR8ZW58MHx8MHx8fDA%3D" alt="Elephant">
+            </div>
+        </div>
+        <div class="item5">
+            <div class="image">
+                Grass
+                <img src="https://plus.unsplash.com/premium_photo-1667530834040-9a9ce7f52e96?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW91bnRhaW5zfGVufDB8fDB8fHww" alt="Grass">
+            </div>
+        </div>
+        <div class="item6">
+            <div class="image">
+                Sunset
+                <img src="https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunset">
+            </div>
+        </div>
+    </div> -->
+
+</body>
+</html>
