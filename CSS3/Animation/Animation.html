@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation CSS</title>
+    <style>
+
+        p{
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
+
+        /* @keyframes is like a mini movie script that tells an element how to move or change over time. 
+            You can think of it as a step-by-step guide for an animation. 
+            For example, in your code, it tells the paragraph (<p>) how to slide in from the right side of the screen to its original position. */
+        @keyframes slidein{
+
+            /* The "from" state is where the animation starts */
+            from{
+
+                /* Starts with the paragraph off-screen to the right */
+                margin-left: 100%;
+
+                /* The paragraph is three times its normal width */
+                width: 300%;
+            }
+
+            /* The "to" state is where the animation ends */
+            to{
+
+                /* Ends with the paragraph in its original position */
+                margin-left: 0%;
+
+                /* The paragraph returns to its original width */
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat debitis necessitatibus nam sint consequatur, fugit distinctio magni? Rerum, alias? Eligendi molestias exercitationem sint eveniet adipisci sunt sapiente excepturi! Aliquam, neque.
+    </p>
+
+</body>
+</html>
