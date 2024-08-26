@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 8rem);
+        }
+
+        .items1{
+            background-color: red;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .items2{
+            background-color: purple;
+            grid-column-start: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        .items3{
+            background-color: orange;
+            grid-column-start: 1;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+
+        .items4{
+            background-color: yellow;
+        }
+
+        .items5{
+            background-color: rgb(0, 233, 0);
+        }
+
+        .items6{
+            background-color: green;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 4;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <h1>This is grid</h1>
+    
+    <div class="grid-container">
+
+        <div class="items1"></div>
+        <div class="items2"></div>
+        <div class="items3"></div>
+        <div class="items4"></div>
+        <div class="items5"></div>
+        <div class="items6"></div>
+    </div>
+
+</body>
+</html>
